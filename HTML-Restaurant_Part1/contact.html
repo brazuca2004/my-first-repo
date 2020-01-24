@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Name: Helber Ribeiro
+Date Created: December 12, 2019
+Most recent revision: December 20, 2019
+-->
+<html lang="en"> 
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <main> <!-- The main element contains all blocks on the page -->
+            <header>
+                <h1>Joe's Restaurant</h1>
+            </header>
+
+            <nav> <!-- The nav element will include navigation buttons or links -->
+                <hr/>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="menu.html">Menu</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <hr/>
+            </nav>
+            
+            <form action="submit.html" method="POST">
+                <!-- Name label and textbox -->
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" name="name"><br />
+                
+                <!-- Phone Number label and textbox -->
+                <label for="email">Email:</label><br />
+                <input type="text" id="email" name="email"><br />
+                
+                <!-- Phone Number label and textbox -->
+                <label for="phone">Phone:</label><br />
+                <input type="text" id="phone" name="phone"><br />
+                
+                <!-- Dropdown menu -->
+                <label for="reason">Reason for Inquiry:</label><br />
+                <select id="reason" name="reason">
+                    <option value="catering" selected>Catering</option>
+                    <option value="privateParty">Private Party</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select><br />
+                
+                <!-- Textarea -->
+                <label for="info">Additional Information:</label><br />
+                <textarea id="info" name="info"></textarea><br />
+                
+                <!-- Radio buttons -->
+                <label for="beenToRestaurant">Have you been to the restaurant?</label>
+                <input type="radio" id="choice2" name="questionnaire" value="no">
+                <label for="choice1">No</label>
+                <input type="radio" id="choice1" name="questionnaire" value="yes">
+                <label for="choice2">Yes</label><br />
+
+                <!-- Check list -->
+                    <label for="bestDayToContact">Best days to contact you:</label>
+                    <input type="checkbox" id="monday" name="contactDay" value="monday">
+                    <label for="monday">M</label>
+                    <input type="checkbox" id="tuesday" name="contactDay" value="tuesday">
+                    <label for="tuesday">T</label>
+                    <input type="checkbox" id="wednesday" name="contactDay" value="wednesday">
+                    <label for="wednesday">W</label>
+                    <input type="checkbox" id="thursday" name="contactDay" value="thursday">
+                    <label for="thursday">Th</label>
+                    <input type="checkbox" id="friday" name="contactDay" value="friday">
+                    <label for="friday">F</label><br />
+                
+                <!-- Submit button -->
+                <input type="submit" name="sendRequest" value="Send Request">
+            </form>
+
+            <footer> <!-- The footer is a block at the bottom of the page. -->
+                <hr/>
+                    <p>123 Main Street, Venice, CA, 70091<br>(310) 789-1234</p>
+                <hr/>
+                <p>&copy; 2019 Helber Ribeiro. All rights reserved.</p>
+            </footer>
+            
+        </main>
+    </body> 
+</html>

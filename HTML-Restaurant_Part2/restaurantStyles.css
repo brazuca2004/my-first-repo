@@ -1,0 +1,33 @@
+/*
+Name: Helber Ribeiro
+Date Created: January 20, 2020
+Most recent revision: January 20, 2020
+*/
+
+header, footer {
+    background-color: #5b7d87;
+    color: #fef9ff;
+    height: 100px;
+    text-align: center;
+    padding: 30px 10px 20px 10px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#description {
+    background-color: #fef9ff; 
+}
+
+a:visited {
+    color: darkmagenta;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:active {
+    text-decoration: none;
+}

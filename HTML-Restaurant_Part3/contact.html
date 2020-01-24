@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+Name: Helber Ribeiro
+Date Created: December 12, 2019
+Most recent revision: December 20, 2019
+-->
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contact Us</title>
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.4/getting-started/download/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    
+        <style>
+            h1 {
+                font-family: 'Poppins', sans-serif;
+            }
+        
+            label {
+                font-weight: bold;
+            }
+            
+            a:visited {
+                color: darkmagenta;
+            }
+                        
+            a:hover {
+                font-weight: bold;
+            }
+            
+            a:active {
+                text-decoration: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main> <!-- The main element contains all blocks on the page -->
+            <header>
+                <h1>Joe's Restaurant</h1>
+            </header>
+
+            <nav> <!-- The nav element will include navigation buttons or links -->
+                <hr/>
+                <p><a class="btn badge-pill" href="index.html"><svg class="bi bi-house" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.646 3.146a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5h-4.5a.5.5 0 01-.5-.5v-4H9v4a.5.5 0 01-.5.5H4a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6zM4.5 9.707V16H8v-4a.5.5 0 01.5-.5h3a.5.5 0 01.5.5v4h3.5V9.707l-5.5-5.5-5.5 5.5z" clip-rule="evenodd"></path></svg></a></p>
+                <p><a class="btn badge-pill" href="menu.html">Menu</a></p>
+                <p><a class="btn badge-pill" href="contact.html">Contact Us</a></p>
+                <div class="clear-float"></div>
+                <hr/>
+            </nav>
+            
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Carousel -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h3><strong>We're opening a new location!</strong></h3>
+                    </div>
+                    <div class="carousel-item">
+                        <h4><strong>We're rolling out our seasonal menu, with special options for this season.</strong></h4>
+                    </div>
+                    <div class="carousel-item">  
+                        <h3><strong>The Drink of the Month is SG Special Brew.</strong></h3>
+                    </div>  
+                </div>
+            </div>
+            
+             <form name="contactUs" onsubmit="return validateItems();">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="name" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email">
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="phone" class="form-control" id="phone">
+                 </div>
+                  <div class="form-group">
+                      <label for="reason">Reason for Inquiry:</label>
+                      <select class="form-control" id="reason">
+                        <option>Catering</option>
+                        <option>Private Party</option>
+                        <option>Feedback</option>
+                        <option>Other</option>
+                      </select>
+                 </div>
+                 
+                  <div class="form-group">
+                      <label for="comment">Additional Information:</label>
+                      <textarea class="form-control" rows="3" id="additionalInfo"></textarea>
+                 </div>
+                 
+                 <strong>Have you been to the restaurant?</strong>
+                 <div class="form-check-inline">
+                     <label class="form-check-label">
+                         <input type="radio" class="form-check-input" name="no">No</label>
+                 </div>
+                 <div class="form-check-inline">
+                     <label class="form-check-label">
+                         <input type="radio" class="form-check-input" name="yes">Yes</label>
+                 </div>
+                 
+                 <br/><strong>Best days to contact you:</strong>
+                 <div class="form-check-inline">
+                 <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="monday">M</label>
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="tuesday">T</label>
+                </div>
+                 
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="wednesday" disabled>W</label>
+                </div>
+                                 <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="thursday" disabled>Th</label>
+                </div> 
+                                 <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="friday" disabled>F</label>
+                </div>
+                <div class="alert alert-success" style="display:none" id="success">
+                    <strong>Thank you!</strong> Your inquiry has been submitted successfully.
+                 </div>
+                 <button type="sendRequest" class="btn btn-info" id="sendRequest">Send Request</button>
+            </form>
+
+            <footer> <!-- The footer is a block at the bottom of the page. -->
+                <hr/>
+                    <p>123 Main Street, Venice, CA, 70091<br>(310) 789-1234</p>
+                <hr/>
+            </footer>
+            <p>&copy; 2019 Helber Ribeiro. All rights reserved.</p>
+        </main>
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.4/getting-started/download/ -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="restaurantStyles.js"></script>
+    </body> 
+</html>
